@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-gb-logo navbar-gb-title" do %>
-    <%= image_tag "muscle.svg", height: 50 %> <%= "g y m B u d d y" %>
+    <%= image_tag "002-muscle.svg", height: 50 %> <%= "g y m B u d d y" %>
   <% end %>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -30,7 +30,7 @@
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to t(".sign_in", default: "sign up"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "sign up"), new_user_path, class: "navbar-wagon-item navbar-wagon-link button-signup" %>
     <% end %>
   </div>
   <!-- Dropdown list appearing on mobile only -->
