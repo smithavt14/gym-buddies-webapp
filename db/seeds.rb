@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(first_name: "test_user", email: "test@gmail.com")
+User.create(first_name: "test_user_first", last_name: "test_user_last", location: "Shanghai", email: "test@gmail.com")
 puts "Created #{User.count} users"
 
 max_participants = (5..20).to_a
