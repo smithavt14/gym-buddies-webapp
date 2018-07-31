@@ -15,6 +15,7 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Review.new(workout_params)
+    @workout.user = current_user
     @workout.save
   end
 
