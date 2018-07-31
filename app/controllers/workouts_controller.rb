@@ -1,5 +1,6 @@
 class WorkoutsController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -14,7 +15,7 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = Review.new(workout_params)
+    @workout = Workout.new(workout_params)
     @workout.user = current_user
     @workout.save
   end

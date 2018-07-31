@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+
 max_participants = (5..20).to_a
 
 Workout.delete_all
@@ -18,7 +21,8 @@ puts "Deleted all the workouts"
     location: Faker::Address.community,
     max_participants: max_participants.sample,
     time: Faker::Time.forward(23, :morning),
+    user:
   )
 end
 
-puts "Created 15 workouts"
+puts "Created #{Workout.count} workouts"
