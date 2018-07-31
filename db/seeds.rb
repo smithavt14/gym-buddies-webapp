@@ -6,20 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-User.delete_all
-puts "Deleted all the users"
-
-20.times do
-  User.create(
-    first_name: Faker::Friends.character,
-    email: "#{Faker::App.name}@gmail.com",
-    location: Faker::Address.city,
-  )
-end
-puts "Created 20 users"
-
-
 max_participants = (5..20).to_a
 
 Workout.delete_all

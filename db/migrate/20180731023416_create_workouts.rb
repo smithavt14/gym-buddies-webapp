@@ -6,7 +6,6 @@ class CreateWorkouts < ActiveRecord::Migration[5.2]
       t.string :location
       t.integer :max_participants
       t.datetime :time
-      t.references :user, foreign_key: true
 
       t.timestamps
     end
