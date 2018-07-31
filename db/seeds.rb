@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+User.delete_all
+puts "Deleted all the users"
+
+20.times do
+  User.create(
+    first_name: Faker::Friends.character,
+    email: "#{Faker::App.name}@gmail.com",
+    location: Faker::Address.city,
+  )
+end
+puts "Created 20 users"
+
+
+max_participants = (5..20).to_a
+
+Workout.delete_all
+puts "Deleted all the workouts"
+
+15.times do
+  Workout.create(
+    name: Faker::Cannabis.strain,
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus autem aliquam fugit eveniet accusamus eaque excepturi adipisci error velit facilis dolores, debitis sint aperiam cumque quod recusandae necessitatibus ipsum repudiandae?",
+    location: Faker::Address.community,
+    max_participants: max_participants.sample,
+    time: Faker::Time.forward(23, :morning),
+  )
+end
+
+puts "Created 15 workouts"
