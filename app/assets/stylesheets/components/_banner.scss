@@ -1,13 +1,26 @@
 .banner {
-  background-image: url('https://images.pexels.com/photos/1265610/pexels-photo-1265610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  background-size: cover;
+  // background-image: url('https://images.pexels.com/photos/1265610/pexels-photo-1265610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  // background-size: cover;
+  background-color: #F4E6D5;
   height: calc(100vh - 70px);
   margin: 0px !important;
   padding: 0px !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .banner-title {
-  margin: 0px;
-  font-size: 120px;
-  color: white;
+  margin-bottom: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #5A6174;
 }
+
+.banner-content {
+  text-align: center;
+}
+
+
+
+

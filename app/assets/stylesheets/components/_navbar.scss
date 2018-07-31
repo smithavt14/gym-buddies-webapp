@@ -11,8 +11,17 @@
 }
 
 /* Logo */
-.navbar-wagon-brand img {
+.navbar-gb-logo img {
   height: 50px;
+}
+
+.navbar-gb-title {
+  color: #D60A2E;
+}
+
+.navbar-gb-title:hover {
+  text-decoration: none;
+  color: #D60A2E;
 }
 
 /* User Avatar */
