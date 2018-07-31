@@ -1,6 +1,5 @@
+<%= render 'navbar' %>
+<%= render 'banner' %>
 <h1>Workouts#index</h1>
 <p>This is the homepage</p>
-<% @workouts.each do |workout| %>
-  <li><%= workout.name %>
-  </li>
-<% end %>
+<%= render 'workouts' %>

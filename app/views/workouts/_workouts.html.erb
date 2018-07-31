@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <%= link_to cocktail_path(cocktail) do  %>
-        <div class="col col-xs-12 col-sm-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cocktail.photo? ? (cl_image_path cocktail.photo) : (image_url 'placeholder.jpeg') %>');">
+    <% @workouts.each do |workout| %>
+      <%= link_to workout_path(workout) do  %>
+        <div class="col col-xs-12 col-sm-6 col-md-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%=asset_path 'placeholder.jpg'%>');">
             <div class="card-description">
-              <h2 class="cocktail-name"><%= cocktail.name %></h2>
+              <h2 class="workout-name"><%= workout.name %></h2>
             </div>
           </div>
         </div>
