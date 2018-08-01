@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.workout = Workout.find(params[:workout_id])
     @booking.save
-    redirect_to workouts_path
+    redirect_to workout_path(@booking.workout)
   end
 
   def destroy
