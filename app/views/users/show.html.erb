@@ -19,7 +19,7 @@
     <% @user.bookings.each do |booking| %>
       <ul>
         <li>
-          <%= booking.workout.name %>
+          <%= link_to booking.workout.name, workout_path(booking.workout) %>
         </li>
       </ul>
     <% end %>
