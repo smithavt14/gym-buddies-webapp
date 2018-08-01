@@ -1,5 +1,4 @@
 <div class="nav-margin"></div>
-
 <div class="user-wrapper">
   <div class="avatar-placeholder"></div>
   <div class="user-container">
@@ -19,9 +18,9 @@
     <h3>Your Bookings</h3>
     <% @user.bookings.each do |booking| %>
       <ul>
-       <li>
-         <%= booking.workout.name %>
-       </li>
+        <li>
+          <%= link_to booking.workout.name, workout_path(booking.workout) %>
+        </li>
       </ul>
     <% end %>
     <%= link_to "Edit your account", edit_user_registration_path %>
