@@ -13,3 +13,11 @@
     </li>
   </ul>
 <% end %>
+<h3>Your Bookings</h3>
+<% @user.bookings.each do |booking| %>
+  <ul>
+    <li>
+      <%= booking.workout.name %>
+    </li>
+  </ul>
+<% end %>
