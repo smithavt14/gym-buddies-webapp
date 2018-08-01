@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'booking/new'
+  get 'booking/create'
+  get 'booking/destroy'
   root to: 'workouts#index'
   devise_for :users
   resources :workouts do

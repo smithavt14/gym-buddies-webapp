@@ -1,4 +1,5 @@
 <div class="nav-margin"></div>
+
 <div class="user-wrapper">
   <div class="avatar-placeholder"></div>
   <div class="user-container">
@@ -13,6 +14,14 @@
           <%= workout.location %>
           <%= workout.time %>
         </li>
+      </ul>
+    <% end %>
+    <h3>Your Bookings</h3>
+    <% @user.bookings.each do |booking| %>
+      <ul>
+       <li>
+         <%= booking.workout.name %>
+       </li>
       </ul>
     <% end %>
     <%= link_to "Edit your account", edit_user_registration_path %>

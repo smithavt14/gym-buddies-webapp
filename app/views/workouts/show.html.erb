@@ -1,4 +1,14 @@
 <div class="space" style="margin-top: 70px"></div>
 <h1><%= @workout.name %></h1>
-<p class="italics">What: <%= @workout.description %></p>
-<p>When: <%= @workout.time %></p>
+<h3>Description: <%= @workout.description %></h3>
+<h3>Place: <%= @workout.location %></h3>
+<h4>Time: <%= @workout.time %></h4>
+<h3>Participants</h3>
+<% @workout.bookings.each do |booking| %>
+  <ul>
+    <li>
+      <%= booking.user.first_name %>
+    </li>
+  </ul>
+<% end %>
+<%= button_to "Join", workout_bookings_path(@workout) %>
