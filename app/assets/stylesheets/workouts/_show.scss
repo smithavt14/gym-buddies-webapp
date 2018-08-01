@@ -1,0 +1,46 @@
+.workouts-show-banner {
+  background-color: #828DAA;
+  height: 40vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+
+.workouts-show-wrapper {
+  background-color: #F4E6D5;
+  width: 100vw;
+  height: calc(50vh);
+  display: flex;
+  justify-content: space-around;
+}
+
+.workouts-show-container-left {
+  margin-top: -100px;
+}
+
+.workouts-show-container-left-top {
+  background-color: white;
+  margin: 20px;
+  height: 20vh;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.workouts-show-container-left-bottom {
+  background-color: white;
+  margin: 20px;
+  height: 30vh;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.workouts-show-container-right {
+  margin-top: -80px;
+  background-color: white;
+  min-height: 50vh;
+  padding: 10px;
+  border-radius: 5px;
+  width: 40vw;
+}
