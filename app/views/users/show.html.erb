@@ -1,7 +1,6 @@
 <div class="nav-margin"></div>
-
 <div class="user-wrapper">
-  <div class="avatar-placeholder"></div>
+  <div class="avatar-placeholder" style="background-image: url('https://vignette.wikia.nocookie.net/walkingdead/images/1/1d/Yeuns6.png/revision/latest?cb=20151011132227'); background-size: cover; "></div>
   <div class="user-container">
     <h1><%= @user.first_name %></h1>
     <h3>Location: <%= @user.location %></h3>
@@ -19,9 +18,9 @@
     <h3>Your Bookings</h3>
     <% @user.bookings.each do |booking| %>
       <ul>
-       <li>
-         <%= booking.workout.name %>
-       </li>
+        <li>
+          <%= booking.workout.name %>
+        </li>
       </ul>
     <% end %>
     <%= link_to "Edit your account", edit_user_registration_path %>
