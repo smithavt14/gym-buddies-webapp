@@ -1,16 +1,34 @@
 <div class="wrapper wrapper-darkblue">
   <div class="container">
-    <h2 class="text-center top-title">Top workouts</h2>
+    <h2 class="text-center top-title">categories</h2>
     <div class="container">
       <div class="cards">
         <div class="row col-xs-12 col-sm-6 col-md-4">
-          <%= render 'partials/category-card' %>
+          <div class="card">
+            <div class="card-body" style="background-image: url(<%= image_path 'bodyweight.svg'%>); background-size: cover">
+            </div>
+            <div class="card-footer">
+              <p class="text-center">bodyweight</p>
+            </div>
+          </div>
         </div>
         <div class="row col-xs-12 col-sm-6 col-md-4">
-          <%= render 'partials/category-card' %>
+          <div class="card">
+            <div class="card-body" style="background-image: url(<%= image_path 'kettlebell.svg'%>); background-size: cover">
+            </div>
+            <div class="card-footer">
+              <p>kettlebell</p>
+            </div>
+          </div>
         </div>
         <div class="row col-xs-12 col-sm-6 col-md-4">
-          <%= render 'partials/category-card' %>
+          <div class="card">
+            <div class="card-body" style="background-image: url(<%= image_path 'weightlifting.svg'%>); background-size: cover">
+            </div>
+            <div class="card-footer">
+              <p>weightlifting</p>
+            </div>
+          </div>
         </div>
         <!-- 12 cols of 1 column -->
       </div>
