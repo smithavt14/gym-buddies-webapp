@@ -18,6 +18,7 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
     @workout.user = current_user
     @workout.save
+    redirect_to workout_path(@workout)
   end
 
   def edit
