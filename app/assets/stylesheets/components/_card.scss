@@ -3,14 +3,20 @@
     margin: 10px;
     border-radius: 1px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #5A6173;
 }
 
 .card-body {
     height: 180px;
     background-size: cover;
-    color: white;
     position: relative;
     background-color: white; //replace with an image
+}
+
+.card-location {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .card-footer {
