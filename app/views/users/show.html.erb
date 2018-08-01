@@ -1,23 +1,29 @@
 <div class="nav-margin"></div>
-<h1><%= @user.first_name %></h1>
-<h3>Location: <%= @user.location %></h3>
-<%= link_to "Edit your account", edit_user_registration_path %>
-<h3>Your workouts</h3>
-<% @user.workouts.each do |workout| %>
-  <ul>
-    <li>
-      <%= link_to workout.name, workout_path(workout) %>
-      <%= workout.description %>
-      <%= workout.location %>
-      <%= workout.time %>
-    </li>
-  </ul>
-<% end %>
-<h3>Your Bookings</h3>
-<% @user.bookings.each do |booking| %>
-  <ul>
-    <li>
-      <%= booking.workout.name %>
-    </li>
-  </ul>
-<% end %>
+
+<div class="user-wrapper">
+  <div class="avatar-placeholder"></div>
+  <div class="user-container">
+    <h1><%= @user.first_name %></h1>
+    <h3>Location: <%= @user.location %></h3>
+    <h3>Your workouts</h3>
+    <% @user.workouts.each do |workout| %>
+      <ul>
+        <li>
+          <%= link_to workout.name, workout_path(workout) %>
+          <%= workout.description %>
+          <%= workout.location %>
+          <%= workout.time %>
+        </li>
+      </ul>
+    <% end %>
+    <h3>Your Bookings</h3>
+    <% @user.bookings.each do |booking| %>
+      <ul>
+       <li>
+         <%= booking.workout.name %>
+       </li>
+      </ul>
+    <% end %>
+    <%= link_to "Edit your account", edit_user_registration_path %>
+  </div>
+</div>
