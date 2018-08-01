@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :users
   root to: 'workouts#index'
+  devise_for :users
   resources :workouts do
     resources :bookings, only: [ :index, :show, :new, :create, :destroy ]
   end

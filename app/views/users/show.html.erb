@@ -1,4 +1,5 @@
 <div class="nav-margin"></div>
-<h1>User profile page</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<p>create large circular avatar component</p>
+<h1><%= @user.first_name %></h1>
+<div class="profile-avatar">
+  <%= link_to "Edit your account", edit_user_registration_path %>
+</div>
