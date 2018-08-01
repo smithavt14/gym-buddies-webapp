@@ -7,8 +7,9 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "new workout", new_workout_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "bookings", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Create a Workout", new_workout_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Browse my Bookings", user_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">

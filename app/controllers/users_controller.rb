@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    redirect_to user_path(current_user)
   end
 
   def edit

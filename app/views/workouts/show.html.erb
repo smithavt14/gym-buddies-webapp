@@ -1,14 +1,31 @@
 <div class="space" style="margin-top: 70px"></div>
-<h1><%= @workout.name %></h1>
-<h3>Description: <%= @workout.description %></h3>
-<h3>Place: <%= @workout.location %></h3>
-<h4>Time: <%= @workout.time %></h4>
-<h3>Participants</h3>
-<% @workout.bookings.each do |booking| %>
-  <ul>
-    <li>
-      <%= booking.user.first_name %>
-    </li>
-  </ul>
-<% end %>
-<%= button_to "Join", workout_bookings_path(@workout) %>
+<div class="workouts-show-banner">
+</div>
+<div class="workouts-show-wrapper">
+  <div class="workouts-show-container-left">
+    <div class="workouts-show-container-left-top">
+      <h1><%= @workout.name %></h1>
+      <p>Description: <%= @workout.description %></p>
+    </div>
+    <div class="workouts-show-container-left-bottom">
+      <h3>Place: <%= @workout.location %></h3>
+      <h4>Time: <%= @workout.time %></h4>
+    </div>
+  </div>
+  <div class="workouts-show-container-right">
+    <div class="workouts-show-container-right-top">
+      <h2>Trainer: <%= @workout.user.first_name %></h2>
+    </div>
+    <div class="workouts-show-container-right-bottom">
+      <h3>Participants</h3>
+      <% @workout.bookings.each do |booking| %>
+        <ul>
+          <li>
+            <%= booking.user.first_name %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+    <%= button_to "Join", workout_bookings_path(@workout) %>
+  </div>
+</div>

@@ -1,4 +1,19 @@
 <%= render 'partials/banner' %>
 <%= render 'partials/section' %>
-<h1 class="text-center">Browse workouts</h1>
-<%= render 'partials/workouts' %>
+<div class="wrapper-index">
+  <h1 id="workouts" class="text-center" style="margin-top: 0px;">Browse workouts</h1>
+  <% @workouts.each do |workout| %>
+    <div class="col col-xs-12 col-sm-12 col-md-4">
+      <%= link_to workout_path(workout) do  %>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-location"><%= workout.location %></p>
+          </div>
+          <div class="card-footer">
+            <%= workout.name %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
