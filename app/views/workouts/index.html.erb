@@ -1,8 +1,9 @@
 <%= render 'partials/banner' %>
-<%= render 'partials/section' %>
-<div class="wrapper-index">
+<div class="index-wrapper">
   <h1 id="workouts" class="text-center" style="margin-top: 0px;">Browse workouts</h1>
-</div>
+  <div class="index-map">
+    <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>"></div>
+  </div>
 <% @workouts.each do |workout| %>
   <div class="col col-xs-12 col-sm-12 col-md-4">
     <div class="card">
@@ -37,4 +38,4 @@
       </div>
     </div>
   </div>
-<% end %>
+</div>

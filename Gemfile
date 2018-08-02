@@ -39,6 +39,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'acts-as-taggable-on', '~> 6.0'
+gem "geocoder"
 
 
 # Use ActiveStorage variant
