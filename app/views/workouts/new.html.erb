@@ -1,2 +1,11 @@
 <h1 class="text-center">New Workout</h1>
-<%= render 'partials/workout_form' %>
+<div class="col col-sm-8 col-sm-offset-2"><%= simple_form_for(@workout) do |f| %>
+    <%= f.input :name, placeholder: 'e.g. Yoga' %>
+    <%= f.input :description, placeholder: 'e.g. Improve your flexibility' %>
+    <%= f.input :photo %>
+    <%= f.input :location %>
+    <%= f.input :time %>
+    <%= f.input :max_participants %>
+    <%= f.button :submit, class:"btn btn-danger" %>
+  <% end %>
+</div>
