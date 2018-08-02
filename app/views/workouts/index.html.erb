@@ -7,38 +7,36 @@
   <div class="col col-xs-12 col-sm-12 col-md-4">
     <%= link_to workout_path(workout) do  %>
       <div class="card">
-        <div class="front">
+        <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'placeholder.jpg'%>); background-size: cover; border-radius: 10px">
           <header>
-            <%= image_tag 'kettlebell.svg'%>
+            <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+            <%= image_tag 'kettlebell.svg', id: "category"%>
           </header>
           <h3><%= workout.name %></h3>
           <p> <%= workout.location %> </p>
-          <span>Hover to see details</span>
         </div>
         <div class="back">
           <ul>
-            <li><strong>Email:</strong> </li>
-            <li><strong>Facebook:</strong> </li>
-            <li><strong>Codepen.io:</strong</li>
-              <li><strong>Twitter:</strong</li>
-                <li><strong>YouTube:</strong</li>
-                </ul>
-              </div>
-            </div>
-          <% end %>
+            <li><strong>location: </strong><%= workout.location %></li>
+            <li><strong>time: </strong><%= workout.nicetime %></li>
+          </ul>
+          <span>Click for more info</span>
         </div>
-      <% end %>
-      <!--<% @workouts.each do |workout| %>
-      <div class="col col-xs-12 col-sm-12 col-md-4">
-        <%= link_to workout_path(workout) do  %>
-          <div class="card";">
-            <div class="card-body">
-              <p class="card-location"><%= workout.location %></p>
-            </div>
-            <div class="card-footer">
-              <%= workout.name %>
-            </div>
-          </div>
-        <% end %>
       </div>
     <% end %>
+  </div>
+<% end %>
+<!--<% @workouts.each do |workout| %>
+<div class="col col-xs-12 col-sm-12 col-md-4">
+  <%= link_to workout_path(workout) do  %>
+    <div class="card";">
+      <div class="card-body">
+        <p class="card-location"><%= workout.location %></p>
+      </div>
+      <div class="card-footer">
+        <%= workout.name %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<% end %>
