@@ -55,7 +55,7 @@
     position: relative;
     background-color: white;
     left: 97px;
-    top: 11px;
+    top: 19px;
 }
 
 .card .front #avatar {
@@ -63,7 +63,7 @@
     height: 40px;
     border-radius: 50%;
     position: relative;
-    top: 11px;
+    top: 19px;
     left: 89px;
     background-color: white;
 }
@@ -91,9 +91,12 @@
 }
 
 .card .back {
+    color: white;
+    text-shadow: none;
     z-index: 1;
     transform: rotateY(180deg);
-    backface-visibility: hidden
+    backface-visibility: hidden;
+    background-color: #F38B4C;
 }
 
 .card .back ul {
