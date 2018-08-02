@@ -9,9 +9,9 @@
 // }
 
 .card {
-    width: 300px;
-    height: 320px;
-    margin: 50px auto;
+    width: 30vw;
+    height: 35vh;
+    margin: 30px auto;
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out
@@ -43,28 +43,36 @@
 .card .front header {
     background-color: #828DA9;
     width: 100%;
-    height: 80px;
+    height: 50px;
     margin-bottom: 55px;
     border-radius: 10px 10px 0 0
 }
 
-.card .front #category {
+.card .back header {
+    background-color: #828DA9;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 55px;
+    border-radius: 10px 10px 0 0
+}
+
+.card #category {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     position: relative;
     background-color: white;
-    left: 97px;
-    top: 19px;
+    left: 113px;
+    top: 5px;
 }
 
-.card .front #avatar {
+.card #avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     position: relative;
-    top: 19px;
-    left: 89px;
+    top: 5px;
+    left: 208px;
     background-color: white;
 }
 .card .front h3 {
