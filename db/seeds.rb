@@ -6,7 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(first_name: "test_user_first", last_name: "test_user_last", location: "Shanghai", email: "test@gmail.com")
+puts "deleting bookings..."
+
+Booking.delete_all if Rails.env.development?
+
+puts "deleting workouts..."
+
+Workout.delete_all if Rails.env.development?
+
+puts "deleting users..."
+
+User.delete_all if Rails.env.development?
+
+
+User.create(first_name: "test_user_first", last_name: "test_user_last", location: "Shanghai", email: "test@gmail.com", password: "123123")
 puts "Created #{User.count} users"
 
 max_participants = (5..20).to_a
