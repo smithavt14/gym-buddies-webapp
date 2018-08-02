@@ -27,8 +27,10 @@ max_participants = (5..20).to_a
 Workout.delete_all
 puts "Deleted all the workouts"
 
+collection = ["Bodyweight", "Weighted", "Gymnastics", "Yoga", "Group", "Outdoor", "Indoor", "Advanced", "Intermediate", "Beginner"]
+
 15.times do
-  Workout.create(
+  workout = Workout.new(
     name: Faker::Cannabis.strain,
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus autem aliquam fugit eveniet accusamus eaque excepturi adipisci error velit facilis dolores, debitis sint aperiam cumque quod recusandae necessitatibus ipsum repudiandae?",
     location: Faker::Address.community,
@@ -36,6 +38,10 @@ puts "Deleted all the workouts"
     time: Faker::Time.forward(23, :morning),
     user: User.last
   )
+  workout.tag_list.add(collection.sample)
+  workout.tag_list.add(collection.sample)
+  workout.tag_list.add(collection.sample)
+  workout.save
 end
 
 puts "Created #{Workout.count} workouts"
