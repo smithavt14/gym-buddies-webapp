@@ -17,28 +17,25 @@
         </div>
         <div class="back">
           <ul>
-            <li><strong>Email:</strong> </li>
-            <li><strong>Facebook:</strong> </li>
-            <li><strong>Codepen.io:</strong</li>
-              <li><strong>Twitter:</strong</li>
-                <li><strong>YouTube:</strong</li>
-                </ul>
-              </div>
-            </div>
-          <% end %>
+            <li><strong>Workout description:</strong></li>
+            <li><%= workout.description %></li>
+          </ul>
         </div>
-      <% end %>
-      <!--<% @workouts.each do |workout| %>
-      <div class="col col-xs-12 col-sm-12 col-md-4">
-        <%= link_to workout_path(workout) do  %>
-          <div class="card";">
-            <div class="card-body">
-              <p class="card-location"><%= workout.location %></p>
-            </div>
-            <div class="card-footer">
-              <%= workout.name %>
-            </div>
-          </div>
-        <% end %>
       </div>
     <% end %>
+  </div>
+<% end %>
+<!--<% @workouts.each do |workout| %>
+<div class="col col-xs-12 col-sm-12 col-md-4">
+  <%= link_to workout_path(workout) do  %>
+    <div class="card";">
+      <div class="card-body">
+        <p class="card-location"><%= workout.location %></p>
+      </div>
+      <div class="card-footer">
+        <%= workout.name %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<% end %>

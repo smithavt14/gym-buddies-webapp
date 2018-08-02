@@ -14,7 +14,7 @@
     margin: 50px auto;
     position: relative;
     transform-style: preserve-3d;
-    transition: all 0.7s ease-in-out
+    transition: all 0.5s ease-in-out
 }
 
 .card:hover {
@@ -49,11 +49,12 @@
 }
 
 .card .front img {
-    width: 100px;
+    width: 40px;
     height: 100px;
     border-radius: 50%;
     position: relative;
-    top: 25px
+    top: -23px;
+    left: 125px;
 }
 
 .card .front h3 {
