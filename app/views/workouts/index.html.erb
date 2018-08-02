@@ -2,18 +2,43 @@
 <%= render 'partials/section' %>
 <div class="wrapper-index">
   <h1 id="workouts" class="text-center" style="margin-top: 0px;">Browse workouts</h1>
-  <% @workouts.each do |workout| %>
-    <div class="col col-xs-12 col-sm-12 col-md-4">
-      <%= link_to workout_path(workout) do  %>
-        <div class="card">
-          <div class="card-body">
-            <p class="card-location"><%= workout.location %></p>
-          </div>
-          <div class="card-footer">
-            <%= workout.name %>
-          </div>
+</div>
+<% @workouts.each do |workout| %>
+  <div class="col col-xs-12 col-sm-12 col-md-4">
+    <%= link_to workout_path(workout) do  %>
+      <div class="card">
+        <div class="front">
+          <header>
+            <%= image_tag 'kettlebell.svg'%>
+          </header>
+          <h3><%= workout.name %></h3>
+          <p> <%= workout.location %> </p>
+          <span>Hover to see details</span>
+        </div>
+        <div class="back">
+          <ul>
+            <li><strong>Email:</strong> </li>
+            <li><strong>Facebook:</strong> </li>
+            <li><strong>Codepen.io:</strong</li>
+              <li><strong>Twitter:</strong</li>
+                <li><strong>YouTube:</strong</li>
+                </ul>
+              </div>
+            </div>
+          <% end %>
         </div>
       <% end %>
-    </div>
-  <% end %>
-</div>
+      <!--<% @workouts.each do |workout| %>
+      <div class="col col-xs-12 col-sm-12 col-md-4">
+        <%= link_to workout_path(workout) do  %>
+          <div class="card";">
+            <div class="card-body">
+              <p class="card-location"><%= workout.location %></p>
+            </div>
+            <div class="card-footer">
+              <%= workout.name %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>

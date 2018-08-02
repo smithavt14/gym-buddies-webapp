@@ -2,7 +2,9 @@
     <%= f.input :name, placeholder: 'e.g. Yoga' %>
     <%= f.input :description, placeholder: 'e.g. Improve your flexibility' %>
     <%= f.input :location %>
-    <%= f.input :time %>
+    <div class="form-inline">
+      <%= f.input :time %>
+    </div>
     <%= f.input :max_participants %>
     <%= f.button :submit, class:"btn btn-danger" %>
   <% end %>
