@@ -8,8 +8,8 @@
     // perspective: 1000px
 // }
 
-.card {
-    width: 32vw;
+.relative-card {
+    width: 28vw;
     height: 35vh;
     margin: 30px auto;
     position: relative;
@@ -17,11 +17,11 @@
     transition: all 0.5s ease-in-out
 }
 
-.card:hover {
+.relative-card:hover {
     transform: rotateY(180deg)
 }
 
-.card > div {
+.relative-card > div {
     position: absolute;
     top: 0;
     left: 0;
@@ -35,12 +35,12 @@
     text-align: center
 }
 
-.card .front {
+.relative-card .front {
     z-index: 2;
     backface-visibility: hidden
 }
 
-.card .front header {
+.relative-card .front header {
     background-color: #828DA9;
     width: 100%;
     height: 50px;
@@ -48,7 +48,7 @@
     border-radius: 10px 10px 0 0
 }
 
-.card .back header {
+.relative-card .back header {
     background-color: #828DA9;
     width: 100%;
     height: 50px;
@@ -56,33 +56,31 @@
     border-radius: 10px 10px 0 0
 }
 
-.card #category {
+.relative-card #category {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     position: relative;
-    background-color: white;
-    left: 113px;
+    left: 78px;
     top: 5px;
 }
 
-.card #avatar {
+.relative-card #avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     position: relative;
     top: 5px;
-    left: 208px;
-    background-color: white;
+    left: 176px;
 }
-.card .front h3 {
+.relative-card .front h3 {
     margin-top: 25px;
     position: absolute;
     top: 60px;
     left: 15px;
 }
 
-.card .front p {
+.relative-card .front p {
     margin: 0 auto;
     width: 90%;
     line-height: 1.7;
@@ -91,14 +89,14 @@
     left: -53px;
 }
 
-.card .front span {
+.relative-card .front span {
     display: inline-block;
     margin-top: 5px;
     color: #60AC37;
     font-weight: bold
 }
 
-.card .back {
+.relative-card .back {
     color: white;
     text-shadow: none;
     z-index: 1;
@@ -107,7 +105,7 @@
     background-color: #F38B4C;
 }
 
-.card .back ul {
+.relative-card .back ul {
     padding: 0;
     list-style: none;
     line-height: 2
