@@ -27,8 +27,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #EEE;
-    color:#777;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);;
     border-radius: 10px;
     border: 1px solid #CCC;
     font-family: Arial, Tahoma;
@@ -48,23 +48,39 @@
     border-radius: 10px 10px 0 0
 }
 
-.card .front img {
+.card .front #category {
     width: 40px;
-    height: 100px;
+    height: 40px;
     border-radius: 50%;
     position: relative;
-    top: -23px;
-    left: 125px;
+    background-color: white;
+    left: 97px;
+    top: 11px;
 }
 
+.card .front #avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    top: 11px;
+    left: 89px;
+    background-color: white;
+}
 .card .front h3 {
-    margin-bottom: 5px
+    margin-top: 25px;
+    position: absolute;
+    top: 60px;
+    left: 15px;
 }
 
 .card .front p {
     margin: 0 auto;
     width: 90%;
-    line-height: 1.7
+    line-height: 1.7;
+    position: absolute;
+    bottom: 7px;
+    left: -53px;
 }
 
 .card .front span {

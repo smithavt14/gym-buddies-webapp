@@ -6,14 +6,14 @@
 <% @workouts.each do |workout| %>
   <div class="col col-xs-12 col-sm-12 col-md-4">
     <%= link_to workout_path(workout) do  %>
-      <div class="card">
+      <div class="card" style="background-image: url(<%= image_path 'placeholder.jpg'%>); background-size: contain; border-radius: 10px">
         <div class="front">
           <header>
-            <%= image_tag 'kettlebell.svg'%>
+            <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+            <%= image_tag 'kettlebell.svg', id: "category"%>
           </header>
           <h3><%= workout.name %></h3>
           <p> <%= workout.location %> </p>
-          <span>Hover to see details</span>
         </div>
         <div class="back">
           <ul>
