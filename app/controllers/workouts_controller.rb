@@ -8,6 +8,7 @@ class WorkoutsController < ApplicationController
   end
 
   def show
+    @related_workouts = @workout.find_related_tags
   end
 
   def new
@@ -44,7 +45,7 @@ class WorkoutsController < ApplicationController
   end
 
   def workout_params
-    params.require(:workout).permit(:name, :description, :location, :max_participants, :time, :photo)
+    params.require(:workout).permit(:name, :description, :location, :max_participants, :time, :photo, :tag_list)
   end
 
 end

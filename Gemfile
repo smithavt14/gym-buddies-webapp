@@ -38,6 +38,8 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
+gem 'acts-as-taggable-on', '~> 6.0'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
