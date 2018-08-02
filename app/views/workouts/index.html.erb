@@ -1,5 +1,10 @@
 <%= render 'partials/banner' %>
-<%= render 'partials/section' %>
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
 <div class="wrapper-index">
   <h1 id="workouts" class="text-center" style="margin-top: 0px;">Browse workouts</h1>
 </div>
