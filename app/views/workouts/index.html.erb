@@ -7,7 +7,7 @@
   <div class="col col-xs-12 col-sm-12 col-md-4">
     <%= link_to workout_path(workout) do  %>
       <div class="card">
-        <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'fitnessplaceholder.jpg'%>); background-size: cover; border-radius: 10px">
+        <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'placeholder.jpg'%>); background-size: cover; border-radius: 10px">
           <header>
             <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
             <%= image_tag 'kettlebell.svg', id: "category"%>
@@ -17,9 +17,10 @@
         </div>
         <div class="back">
           <ul>
-            <li><strong>Workout description:</strong></li>
-            <li><%= workout.description %></li>
+            <li><strong>location: </strong><%= workout.location %></li>
+            <li><strong>time: </strong><%= workout.nicetime %></li>
           </ul>
+          <span>Click for more info</span>
         </div>
       </div>
     <% end %>
