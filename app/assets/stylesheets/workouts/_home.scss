@@ -5,3 +5,19 @@
  font-weight: normal;
 }
 
+.index-wrapper {
+  background-color: #F4E6D5;
+
+}
+
+.index-main-container {
+  display: flex
+}
+
+.index-map {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}
+

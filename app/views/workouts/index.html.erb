@@ -1,37 +1,16 @@
 <%= render 'partials/banner' %>
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-></div>
-<div class="wrapper-index">
+<div class="index-wrapper">
   <h1 id="workouts" class="text-center" style="margin-top: 0px;">Browse workouts</h1>
-</div>
-<% @workouts.each do |workout| %>
-  <div class="col col-xs-12 col-sm-12 col-md-4">
-    <%= link_to workout_path(workout) do  %>
-      <div class="card">
-        <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'placeholder.jpg'%>); background-size: cover; border-radius: 10px">
-          <header>
-            <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
-            <%= image_tag 'kettlebell.svg', id: "category"%>
-          </header>
-          <h3><%= workout.name %></h3>
-          <p> <%= workout.location %> </p>
+  <div class="index-main-container">
+    <div class="index-card-grid">
+      <% @workouts.each do |workout| %>
+        <div class="col col-xs-12 col-sm-12 col-md-4">
+          <%= render 'index_card', workout: workout %>
         </div>
-        <div class="back">
-          <header>
-            <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
-            <%= image_tag 'kettlebell.svg', id: "category"%>
-          </header>
-          <ul>
-            <li><strong>location: </strong><%= workout.location %></li>
-            <li><strong>time: </strong><%= workout.time ? workout.nicetime : "This trainer has not set a time" %></li>
-          </ul>
-          <span>Click for more info</span>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+    <div class="index-map">
+      <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>"></div>
+    </div>
   </div>
-<% end %>
+</div>
