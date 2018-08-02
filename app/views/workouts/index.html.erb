@@ -18,25 +18,11 @@
         <div class="back">
           <ul>
             <li><strong>location: </strong><%= workout.location %></li>
-            <li><strong>time: </strong><%= workout.nicetime %></li>
+            <li><strong>time: </strong><%= workout.time ? workout.nicetime : "This trainer has not set a time" %></li>
           </ul>
           <span>Click for more info</span>
         </div>
       </div>
     <% end %>
   </div>
-<% end %>
-<!--<% @workouts.each do |workout| %>
-<div class="col col-xs-12 col-sm-12 col-md-4">
-  <%= link_to workout_path(workout) do  %>
-    <div class="card";">
-      <div class="card-body">
-        <p class="card-location"><%= workout.location %></p>
-      </div>
-      <div class="card-footer">
-        <%= workout.name %>
-      </div>
-    </div>
-  <% end %>
-</div>
 <% end %>
