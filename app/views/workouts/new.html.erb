@@ -3,13 +3,14 @@
   <div class="col col-sm-8 col-sm-offset-2"><%= simple_form_for(@workout) do |f| %>
       <%= f.input :name, required: true, placeholder: 'e.g. Yoga' %>
       <%= f.input :description, placeholder: 'e.g. Improve your flexibility' %>
-      <div class="form-inline form-inputs">
-        <%= f.input :tag_list, as: :check_boxes, collection: ["Bodyweight", "Weighted", "Gymnastics", "Yoga", "Group", "Outdoor", "Indoor", "Advanced", "Intermediate", "Beginner"] %></div>
+      <div class="form-inline form-inputs" >
+        <div>
+          <%= f.input :tag_list, as: :check_boxes, collection: ["Bodyweight", "Weighted", "Gymnastics", "Yoga", "Group", "Outdoor", "Indoor", "Advanced", "Intermediate", "Beginner"] %></div>
+      </div>
       <%= f.input :photo, required: true %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.input :location, required: true, placeholder: "158 Julu Road, Shanghai" %>
-      <div class="form-inline form-inputs">
-        <%= f.input :time, required: true, minute_step: 15, input_html: { } %></div>
+      <%= f.input :time, required: true, minute_step: 15, wrapper_html: { class: "form-inline form-inputs" } %>
       <%= f.input :max_participants %>
       <%= f.button :submit, class:"button-signup btn-block" %>
     <% end %>
