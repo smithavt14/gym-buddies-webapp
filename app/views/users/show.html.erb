@@ -9,7 +9,7 @@
   <div class="user-show-created">
     <h4>My Created Workouts...</h4>
     <% @user.workouts.each do |workout| %>
-      <% link_to workout_path(workout) do %>
+      <%= link_to workout_path(workout) do %>
         <p><%= workout.name %></p>
       <% end %>
     <% end %>
@@ -17,7 +17,7 @@
   <div class="user-show-booked">
     <h4>My Bookings...</h4>
     <% @user.bookings.each do |booking| %>
-      <% link_to workout_path(booking.workout) do %>
+      <%= link_to workout_path(booking.workout) do %>
         <p><%= booking.workout.name %></p>
       <% end %>
     <% end %>
