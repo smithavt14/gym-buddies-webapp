@@ -6,7 +6,7 @@
   <% @workouts.each do |workout| %>
     <div class="col col-xs-12 col-sm-12 col-md-4">
       <div class="card">
-        <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= workout.photo? ? (cl_image_path workout.photo) : (image_url 'placeholder.jpeg') %>'); background-size: cover; border-radius: 10px">
+        <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= workout.photo? ? (cl_image_path workout.photo) : (image_url 'placeholder.jpg') %>'); background-size: cover; border-radius: 10px">
           <header>
             <%= image_tag user_placeholder(workout), id:"avatar" %>
             <%= image_tag 'kettlebell.svg', id: "category"%>
