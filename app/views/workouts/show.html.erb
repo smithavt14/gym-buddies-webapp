@@ -13,20 +13,30 @@
         <p><strong>Tags:</strong> <%= @workout.tag_list %></p>
       </div>
       <div class="workouts-show-container-left-bottom">
-        <h2>Trainer: <%= @workout.user.first_name %></h2>
-        <p>Here is a description of the trainer.</p>
+        <div class="workouts-show-container-left-bottom-info">
+          <h3>Trainer: <%= @workout.user.first_name %></h3>
+          <p> <%= @workout.user.bio %></p>
+        </div>
+        <div class="workouts-show-container-left-bottom-avatar">
+          <%= link_to user_path(@workout.user) do %>
+            <%= cl_image_tag @workout.user.photo, radius: 60, width: 35, height: 35, crop: :thumb, gravity: :face %>
+          <% end %>
+        </div>
       </div>
       <div class="workouts-show-container-left-bottom-bottom">
         <h3>Participants</h3>
         <% @workout.bookings.each do |booking| %>
           <ul>
             <li>
-              <%= link_to booking.user.first_name, user_path(booking.user) %>
-              <%= cl_image_tag booking.user.photo, radius: 20, width: 50, height: 50, crop: :thumb, gravity: :face %>
+              <%= link_to user_path(booking.user) do %>
+                <%= cl_image_tag booking.user.photo, radius: 20, width: 50, height: 50, crop: :thumb, gravity: :face %>
+              <% end %>
             </li>
           </ul>
         <% end %>
-        <%= button_to "Join", workout_bookings_path(@workout) %>
+        <div class="btn-join">
+          <%= button_to "Join", workout_bookings_path(@workout) %>
+        </div>
       </div>
     </div>
     <div class="show-map">

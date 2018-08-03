@@ -1,24 +1,100 @@
-<<<<<<< HEAD
-<div class="parallax" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= @workout.photo? ? (cl_image_path @workout.photo, height: 500, width: 800, crop: :fill) : (image_path 'placeholder.jpg') %>');">
-  <h1 class="parallax-title"><%= @workout.name %></h1>
+<div class="parallax" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('group-workout.jpg'); height: 50vh;">
 </div>
 <div class="user-show-wrapper">
   <div class="user-show-container-top">
     <div class="user-show-card">
-      <div class="user-wrapper">
-        <div class="user-avatar">
-          <%= cl_image_tag @user.photo %>
-        </div>
-        <div class="box-inner">
-          <h3 class="username"><%= @user.first_name.capitalize %>
-            <%= @user.last_name.capitalize %>
-          </%></h3>
-        <h4 class="location"><%= @user.location %></h4>
-        <h5> placeholder bio </h5>
+      <div class="user-avatar">
+        <%= cl_image_tag @user.photo %>
       </div>
-    </div>
-    <div class="user-show-container-bottom">
+      <div class="box-inner">
+        <h3 class="username"><%= @user.first_name.capitalize %>
+          <%= @user.last_name.capitalize %>
+        </%></h3>
+      <h4 class="location"><%= @user.location %></h4>
+      <h5> <%= @user.bio %> </h5>
     </div>
   </div>
 </div>
+<div class="user-show-container-bottom">
+  <div class="user-show-container-created">
+    <h4>Created Workouts</h4>
+    <%= @user.workouts.each do |workout| %>
+      <div class="card">
+        <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'placeholder.jpg'%>); background-size: cover; border-radius: 10px">
+          <header>
+            <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+            <%= image_tag 'kettlebell.svg', id: "category"%>
+          </header>
+          <h3><%= workout.name %></h3>
+          <p> <%= workout.location %> </p>
+        </div>
+        <div class="back">
+          <header>
+            <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+            <%= image_tag 'kettlebell.svg', id: "category"%>
+          </header>
+          <ul>
+            <li><strong>location: </strong><%= workout.location %></li>
+            <li><strong>time: </strong><%= workout.time ? workout.nicetime : "This trainer has not set a time" %></li>
+            <div>Tags</div>
+            <div class="tag-container">
+              <div>
+                <% workout.tag_list.each do |tag| %>
+                  <%= link_to root_path do %>
+                    <div class="btn btn-success btn-sm"><%= tag %></div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </ul>
+          <%= link_to workout_path(workout) do  %>
+            <span class="btn btn-primary">Click for more info</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="user-show-container-booked">
+  <h4>Booked Workouts</h4>
+  <%= @user.bookings.each do |booking| %>
+    <div class="col col-xs-12 col-sm-12 col-md-4">
+      <div class="card">
+        <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'placeholder.jpg'%>); background-size: cover; border-radius: 10px">
+          <header>
+            <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+            <%= image_tag 'kettlebell.svg', id: "category"%>
+          </header>
+          <h3><%= booking.workout.name %></h3>
+          <p> <%= booking.workout.location %> </p>
+        </div>
+        <div class="back">
+          <header>
+            <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+            <%= image_tag 'kettlebell.svg', id: "category"%>
+          </header>
+          <ul>
+            <li><strong>location: </strong><%= booking.workout.location %></li>
+            <li><strong>time: </strong><%= booking.workout.time ? booking.workout.nicetime : "This trainer has not set a time" %></li>
+            <div>Tags</div>
+            <div class="tag-container">
+              <div>
+                <% booking.workout.tag_list.each do |tag| %>
+                  <%= link_to root_path do %>
+                    <div class="btn btn-success btn-sm"><%= tag %></div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </ul>
+          <%= link_to workout_path(booking.workout) do  %>
+            <span class="btn btn-primary">Click for more info</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
 <%= link_to "Edit your account", edit_user_registration_path %>
+</div>

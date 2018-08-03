@@ -26,11 +26,24 @@
 .user-show-container-top {
   display: flex;
   justify-content: space-around;
-  margin-left: 25vw;
 }
 
 .user-show-container-bottom {
+  width: 100vw;
+  height: auto;
 
+}
+
+.user-show-container-created {
+  background-color: white;
+  height: 30vh auto;
+  border: 1px solid black;
+}
+
+.user-show-container-booked {
+  background-color: white;
+  height: 30vh;
+  border: 1px solid black;
 }
 
 .card-wrapper {
