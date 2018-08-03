@@ -75,6 +75,13 @@
   padding: 10px 20px;
   border-radius: 5px;
   width: 50vw;
+  li {
+  display: inline;
+  list-style-type: none;
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  }
 }
 
 .show-map {
