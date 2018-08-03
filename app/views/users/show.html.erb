@@ -1,43 +1,39 @@
-<div class="nav-margin"></div>
 <div class="user-wrapper">
   <div class="card-wrapper">
     <div class="user-card flex-container">
       <div class="user-avatar">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtSt5VT3jEuB1dalQp5_Zz7FASxAWAAIaC-DAmEbYY1w1varwo">
+        <%= cl_image_tag @user.photo %>
       </div>
       <div class="box-inner">
-        <h3 class="username">Harrison Kim</h3>
-        <h4 class="location">Nanjing West Rd.</h4>
-        <h5>Harrison has extensively trained in wushu, qigong and meditation.
-          Harrison is commonly called “Laoshi” out of respect for his moral and ethical structuring. </h5>
-      </div>
+        <h3 class="username"><%= @user.first_name.capitalize %>
+          <%= @user.last_name.capitalize %>
+        </%></h3>
+      <h4 class="location"><%= @user.location %></h4>
+      <h5> placeholder bio </h5>
+      <h3> Your workouts:</h3>
+      <% @user.workouts.each do |workout| %>
+        <ul>
+          <li>
+            <%= link_to workout.name, workout_path(workout) %>
+            <%= workout.description %>
+            <%= workout.location %>
+            <%= workout.time %>
+          </li>
+        </ul>
+      <% end %>
+      <h3>Your bookings:</h3>
+      <% @user.bookings.each do |booking| %>
+        <ul>
+          <li>
+            <%= link_to booking.workout.name, workout_path(booking.workout) %>
+          </li>
+        </ul>
+      <% end %>
     </div>
   </div>
 </div>
+</div>
+</div>
+<%= link_to "Edit your account", edit_user_registration_path %>
 <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill
     %>
-<div class="user-container">
-  <h1><%= @user.first_name %></h1>
-  <h3>Location: <%= @user.location %></h3>
-  <h3>Your workouts</h3>
-  <% @user.workouts.each do |workout| %>
-    <ul>
-      <li>
-        <%= link_to workout.name, workout_path(workout) %>
-        <%= workout.description %>
-        <%= workout.location %>
-        <%= workout.time %>
-      </li>
-    </ul>
-  <% end %>
-  <h3>Your Bookings</h3>
-  <% @user.bookings.each do |booking| %>
-    <ul>
-      <li>
-        <%= link_to booking.workout.name, workout_path(booking.workout) %>
-      </li>
-    </ul>
-  <% end %>
-  <%= link_to "Edit your account", edit_user_registration_path %>
-</div>
-</div>

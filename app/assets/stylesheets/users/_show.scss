@@ -8,6 +8,7 @@
   display: flex;
   background-color: white;
   position: relative;
+  justify-content: center;
 }
 
 .avatar-placeholder {
@@ -21,12 +22,12 @@
 
 .user-container {
   position: absolute;
-  top: 300px;
-  left: 60px;
+
 }
 
 .card-wrapper {
   position: absolute;
+  top: 60px;
 }
 
 body {
