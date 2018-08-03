@@ -5,7 +5,7 @@
     <%= f.input :tag_list, as: :check_boxes, collection: ["Bodyweight", "Weighted", "Gymnastics", "Yoga", "Group", "Outdoor", "Indoor", "Advanced", "Intermediate", "Beginner"] %>
     <%= f.input :photo, required: true %>
     <%= f.input :photo_cache, as: :hidden %>
-    <%= f.input :location, required: true %>
+    <%= f.input :location, required: true, placeholder: "158 Julu Road, Shanghai" %>
     <%= f.input :time, required: true %>
     <%= f.input :max_participants %>
     <%= f.button :submit, class:"btn btn-danger" %>

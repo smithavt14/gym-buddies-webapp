@@ -33,7 +33,7 @@ collection = ["Bodyweight", "Weighted", "Gymnastics", "Yoga", "Group", "Outdoor"
   workout = Workout.new(
     name: Faker::Cannabis.strain,
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus autem aliquam fugit eveniet accusamus eaque excepturi adipisci error velit facilis dolores, debitis sint aperiam cumque quod recusandae necessitatibus ipsum repudiandae?",
-    location: Faker::Address.community,
+    location: Faker::Address.city,
     max_participants: max_participants.sample,
     time: Faker::Time.forward(23, :morning),
     user: User.last

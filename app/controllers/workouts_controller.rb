@@ -4,11 +4,25 @@ class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
 
   def index
-    @workouts = Workout.all
+    @workouts = Workout.where.not(latitude: nil, longitude: nil)
+
+    @markers = @workouts.map do |workout|
+      {
+        lat: workout.latitude,
+        lng: workout.longitude,
+        infoWindow: { content: render_to_string(partial: "/workouts/map_box", locals: { workout: workout }) }
+      }
+    end
   end
 
   def show
     @related_workouts = @workout.find_related_tags
+
+    @markers = [{
+                  lat: @workout.latitude,
+                  lng: @workout.longitude,
+                  infoWindow: { content: render_to_string(partial: "/workouts/map_box", locals: { workout: @workout }) }
+    }]
   end
 
   def new
@@ -45,7 +59,7 @@ class WorkoutsController < ApplicationController
   end
 
   def workout_params
-    params.require(:workout).permit(:name, :description, :location, :max_participants, :time, :photo, :tag_list)
+    params.require(:workout).permit(:name, :description, :location, :max_participants, :time, :photo, tag_list: [])
   end
 
 end

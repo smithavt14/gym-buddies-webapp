@@ -24,7 +24,16 @@
   background-color: white;
   margin: 20px;
   min-height: 20vh;
-  padding: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.workouts-show-container-left-middle {
+  background-color: white;
+  margin: 20px;
+  height: 20vh;
+  padding: 10px 20px;
   border-radius: 5px;
   width: 50vw;
 }
@@ -33,14 +42,23 @@
   background-color: white;
   margin: 20px;
   height: 20vh;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   width: 50vw;
 }
 
-.workouts-show-container-right {
-  margin-top: -80px;
+.workouts-show-container-left-bottom-bottom {
   background-color: white;
+  margin: 20px;
+  min-height: 20vh;
+  max-height: auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.show-map {
+  margin-top: -90px;
   min-height: 40vh;
   max-height: 50vh;
   padding: 10px;
@@ -51,7 +69,13 @@
 .workouts-show-container-bottom {
   margin: 20px;
   height: auto;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   width: 90vw;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
 }
