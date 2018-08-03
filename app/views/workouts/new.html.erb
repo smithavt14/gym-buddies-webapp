@@ -1,13 +1,17 @@
-<h1 class="text-center">New Workout</h1>
-<div class="col col-sm-8 col-sm-offset-2"><%= simple_form_for(@workout) do |f| %>
-    <%= f.input :name, required: true, placeholder: 'e.g. Yoga' %>
-    <%= f.input :description, placeholder: 'e.g. Improve your flexibility' %>
-    <%= f.input :tag_list, as: :check_boxes, collection: ["Bodyweight", "Weighted", "Gymnastics", "Yoga", "Group", "Outdoor", "Indoor", "Advanced", "Intermediate", "Beginner"] %>
-    <%= f.input :photo, required: true %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.input :location, required: true, placeholder: "158 Julu Road, Shanghai" %>
-    <%= f.input :time, required: true %>
-    <%= f.input :max_participants %>
-    <%= f.button :submit, class:"btn btn-danger" %>
-  <% end %>
+<div class="form-wrapper">
+  <h2 class="text-center">New Workout</h1>
+  <div class="col col-sm-8 col-sm-offset-2"><%= simple_form_for(@workout) do |f| %>
+      <%= f.input :name, required: true, placeholder: 'e.g. Yoga' %>
+      <%= f.input :description, placeholder: 'e.g. Improve your flexibility' %>
+      <div class="form-inline form-inputs">
+        <%= f.input :tag_list, as: :check_boxes, collection: ["Bodyweight", "Weighted", "Gymnastics", "Yoga", "Group", "Outdoor", "Indoor", "Advanced", "Intermediate", "Beginner"] %></div>
+      <%= f.input :photo, required: true %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.input :location, required: true, placeholder: "158 Julu Road, Shanghai" %>
+      <div class="form-inline form-inputs">
+        <%= f.input :time, required: true, minute_step: 15, input_html: { } %></div>
+      <%= f.input :max_participants %>
+      <%= f.button :submit, class:"button-signup btn-block" %>
+    <% end %>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 .form-wrapper {
 background-color: #F4E6D5;
-height: 100vh;
+min-height: 120vh;
 }
 
 .form-container {
@@ -11,6 +11,6 @@ height: 100vh;
   color: red;
 }
 
-h2 {
+.form-wrapper h2 {
   padding-top: 30px;
 }
