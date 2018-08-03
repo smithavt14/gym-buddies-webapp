@@ -1,0 +1,27 @@
+.nav-margin {
+  height: 70px;
+}
+
+.user-wrapper {
+  height: 100vh;
+  margin: 40px;
+  display: flex;
+  background-color: white;
+  position: relative;
+}
+
+.avatar-placeholder {
+    height: 220px;
+    width: 180px;
+    border: solid 1px;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+.user-container {
+  position: absolute;
+  top: 300px;
+  left: 60px;
+}
+

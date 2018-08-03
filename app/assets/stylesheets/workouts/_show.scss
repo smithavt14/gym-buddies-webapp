@@ -1,0 +1,91 @@
+.parallax {
+    /* Set a specific height */
+    height: 70vh;
+    background-size: cover;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parallax-title {
+    padding-top: 10%;
+    padding-left: 3%;
+    color: white;
+    font-size: 60px;
+    text-shadow: 1px 1px 3px black;
+}
+
+.workouts-show-wrapper {
+  background-color: #F4E6D5;
+  width: 100vw;
+  height: 130vh;
+}
+
+.workouts-show-container-top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.workouts-show-container-left {
+  margin-top: -100px;
+}
+
+.workouts-show-container-left-top {
+  background-color: white;
+  margin: 20px;
+  min-height: 20vh;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.workouts-show-container-left-middle {
+  background-color: white;
+  margin: 20px;
+  height: 20vh;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.workouts-show-container-left-bottom {
+  background-color: white;
+  margin: 20px;
+  height: 20vh;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.workouts-show-container-left-bottom-bottom {
+  background-color: white;
+  margin: 20px;
+  min-height: 20vh;
+  max-height: auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.show-map {
+  margin-top: -90px;
+  min-height: 40vh;
+  max-height: 50vh;
+  padding: 10px;
+  border-radius: 5px;
+  width: 40vw;
+}
+
+.workouts-show-container-bottom {
+  margin: 20px;
+  height: auto;
+  border-radius: 5px;
+  width: auto;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  location: MyString
+  max_participants: 1
+  time: 
+
+two:
+  name: MyString
+  description: MyText
+  location: MyString
+  max_participants: 1
+  time: 

@@ -1,0 +1,27 @@
+<%= link_to workout_path(workout) do  %>
+  <div class="card">
+    <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'placeholder.jpg'%>); background-size: cover; border-radius: 10px">
+      <div class="header">
+        <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+        <%= image_tag 'kettlebell.svg', id: "category"%>
+      </div>
+      <div class="card-body">
+        <h3><%= workout.name %></h3>
+        <p><%= workout.location %></p>
+      </div>
+    </div>
+    <div class="back">
+      <div class="header">
+        <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+        <%= image_tag 'kettlebell.svg', id: "category"%>
+      </div>
+      <div class="card-body-back">
+        <ul>
+          <li><strong>location: </strong><%= workout.location %></li>
+          <li><strong>time: </strong><%= workout.time ? workout.nicetime : "This trainer has not set a time" %></li>
+        </ul>
+        <span>Click for more info</span>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+
+.button-banner {
+    padding: 18px 25px;
+    color: white;
+    background-color: #5A6174;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.button-banner:hover {
+    background-color: #3F4554;
+    text-decoration: none;
+    color: white;
+    vertical-align: center;
+}
+
+.button-signup {
+  padding: 10px 15px;
+  color: white;
+  background-color: #F27D3C;
+  border-radius: 12px;
+}
+
+.button-signup:hover {
+  color: white;
+  background-color: #ED631A;
+}
