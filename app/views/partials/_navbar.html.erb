@@ -12,6 +12,7 @@
       <%= link_to user_path(current_user) do %>
         <%= cl_image_tag current_user.photo, radius: 60, width: 35, height: 35, crop: :thumb, gravity: :face %>
       <% end %>
+
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
