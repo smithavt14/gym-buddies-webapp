@@ -16,18 +16,10 @@
     text-shadow: 1px 1px 3px black;
 }
 
-
-// .workouts-show-banner {
-//   height: 40vh;
-//   width: 100vw;
-//   background-size: cover;
-// }
-
-
 .workouts-show-wrapper {
   background-color: #F4E6D5;
   width: 100vw;
-  height: 110vh;
+  height: 130vh;
 }
 
 .workouts-show-container-top {
@@ -88,9 +80,8 @@
 .workouts-show-container-bottom {
   margin: 20px;
   height: auto;
-  padding: 10px 20px;
   border-radius: 5px;
-  width: 90vw;
+  width: auto;
   a {
     text-decoration: none;
   }
