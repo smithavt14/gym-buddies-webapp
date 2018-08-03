@@ -19,7 +19,7 @@ puts "deleting users..."
 User.delete_all if Rails.env.development?
 
 
-User.create(first_name: "test_user_first", last_name: "test_user_last", location: "Shanghai", email: "test@gmail.com", password: "123123")
+User.create(first_name: "test_user_first", last_name: "test_user_last", location: "Shanghai", bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex maxime obcaecati nihil inventore quasi, ab rerum neque ratione, explicabo quibusdam exercitationem et ipsam recusandae repudiandae commodi veniam. Doloremque, unde, deleniti.", email: "test@gmail.com", password: "123123")
 puts "Created #{User.count} users"
 
 max_participants = (5..20).to_a
