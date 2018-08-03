@@ -4,7 +4,8 @@
     %>
   <div class="user-container">
     <h1><%= @user.first_name %></h1>
-    <h3>Location: <%= @user.location %></h3>
+    <h4><%= @user.location %></h4>
+    <p> <%= @user.bio %></p>
     <h3>Your workouts</h3>
     <% @user.workouts.each do |workout| %>
       <ul>
