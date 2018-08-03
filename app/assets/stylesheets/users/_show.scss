@@ -10,9 +10,22 @@
 
 .user-show-wrapper {
   height: 100vh;
-  background-color: white;
-  border: 1px solid black;
+  background-color: #F4E6D5;
 }
+
+.video {
+  height: 90vh;
+}
+
+// .video {
+//  position: fixed;
+//  top: 0px;
+//  min-width: 100%;
+//  min-height: 100%;
+//  width: auto;
+//  height: auto;
+//  transform: translate(-50%, -50%);
+// }
 
 .avatar-placeholder {
   height: 220px;
