@@ -17,6 +17,12 @@ class WorkoutsController < ApplicationController
 
   def show
     @related_workouts = @workout.find_related_tags
+
+    @markers = [{
+                  lat: @workout.latitude,
+                  lng: @workout.longitude,
+                  infoWindow: { content: render_to_string(partial: "/workouts/map_box", locals: { workout: @workout }) }
+    }]
   end
 
   def new
