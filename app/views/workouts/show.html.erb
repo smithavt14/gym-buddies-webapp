@@ -1,11 +1,12 @@
 <div class="space" style="margin-top: 70px"></div>
-<div class="workouts-show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= @workout.photo? ? (cl_image_path @workout.photo, height: 500, width: 800, crop: :fill) : (image_path 'placeholder.jpg') %>');">
+<div class="parallax" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= @workout.photo? ? (cl_image_path @workout.photo, height: 500, width: 800, crop: :fill) : (image_path 'placeholder.jpg') %>');">
+  <h1 class="parallax-title"><%= @workout.name %></h1>
 </div>
 <div class="workouts-show-wrapper">
   <div class="workouts-show-container-top">
     <div class="workouts-show-container-left">
       <div class="workouts-show-container-left-top">
-        <h1><%= @workout.name %></h1>
+        <h3>What it's all about</h3>
         <p><%= @workout.description %></p>
         <p><strong>Place:</strong> <%= @workout.location %></p>
         <p><strong>Time:</strong> <%= @workout.nicetime %></p>
@@ -44,25 +45,39 @@
     <% @related_workouts.each_with_index do |workout, index| %>
       <% if index < 3 %>
         <div class="col col-xs-12 col-sm-12 col-md-4">
-          <%= link_to workout_path(workout) do  %>
-            <div class="relative-card">
-              <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'placeholder.jpg'%>); background-size: cover; border-radius: 10px">
-                <header>
-                  <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
-                  <%= image_tag 'kettlebell.svg', id: "category"%>
-                </header>
-                <h3><%= workout.name %></h3>
-                <p> <%= workout.location %> </p>
-              </div>
-              <div class="back">
-                <ul>
-                  <li><strong>location: </strong><%= workout.location %></li>
-                  <li><strong>time: </strong><%= workout.time ? workout.nicetime : "This trainer has not set a time" %></li>
-                </ul>
-                <span>Click for more info</span>
-              </div>
+          <div class="card">
+            <div class="front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'placeholder.jpg'%>); background-size: cover; border-radius: 10px">
+              <header>
+                <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+                <%= image_tag 'kettlebell.svg', id: "category"%>
+              </header>
+              <h3><%= workout.name %></h3>
+              <p> <%= workout.location %> </p>
             </div>
-          <% end %>
+            <div class="back">
+              <header>
+                <%= image_tag 'profile_placeholder.svg', id:"avatar" %>
+                <%= image_tag 'kettlebell.svg', id: "category"%>
+              </header>
+              <ul>
+                <li><strong>location: </strong><%= workout.location %></li>
+                <li><strong>time: </strong><%= workout.time ? workout.nicetime : "This trainer has not set a time" %></li>
+                <div>Tags</div>
+                <div class="tag-container">
+                  <div>
+                    <% workout.tag_list.each do |tag| %>
+                      <%= link_to root_path do %>
+                        <div class="btn btn-success btn-sm"><%= tag %></div>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </ul>
+              <%= link_to workout_path(workout) do  %>
+                <span class="btn btn-primary">Click for more info</span>
+              <% end %>
+            </div>
+          </div>
         </div>
       <% else %>
       <% end %>
