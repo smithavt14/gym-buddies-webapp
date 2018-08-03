@@ -1,22 +1,24 @@
+<<<<<<< HEAD
 <div class="parallax" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= @workout.photo? ? (cl_image_path @workout.photo, height: 500, width: 800, crop: :fill) : (image_path 'placeholder.jpg') %>');">
   <h1 class="parallax-title"><%= @workout.name %></h1>
 </div>
 <div class="user-show-wrapper">
   <div class="user-show-container-top">
     <div class="user-show-card">
-      <div class="user-avatar">
-        <%= cl_image_tag @user.photo %>
+      <div class="user-wrapper">
+        <div class="user-avatar">
+          <%= cl_image_tag @user.photo %>
+        </div>
+        <div class="box-inner">
+          <h3 class="username"><%= @user.first_name.capitalize %>
+            <%= @user.last_name.capitalize %>
+          </%></h3>
+        <h4 class="location"><%= @user.location %></h4>
+        <h5> placeholder bio </h5>
       </div>
-      <div class="box-inner">
-        <h3 class="username"><%= @user.first_name.capitalize %>
-          <%= @user.last_name.capitalize %>
-        </%></h3>
-      <h4 class="location"><%= @user.location %></h4>
-      <h5> placeholder bio </h5>
+    </div>
+    <div class="user-show-container-bottom">
     </div>
   </div>
-  <div class="user-show-container-bottom">
-  </div>
-</div>
 </div>
 <%= link_to "Edit your account", edit_user_registration_path %>

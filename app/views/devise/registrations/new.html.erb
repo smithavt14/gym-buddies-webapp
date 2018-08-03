@@ -5,6 +5,7 @@
       <div class="form-inputs">
         <%= f.input :first_name, required: true, autofocus: true %>
         <%= f.input :last_name, required: false, autofocus: true %>
+        <%= f.input :bio, required: false, autofocus: true, placeholder: ("Slayed dragons for 15 years before becoming a banker...") %>
         <%= f.input :location, required: false, autofocus: true, placeholder: "Beijing, Shanghai, New York ..." %>
         <%= f.input :photo, required: true, autofocus: true, hint: ("Upload your profile photo (size: 300x400)") %>
         <%= f.input :photo_cache, as: :hidden %>
