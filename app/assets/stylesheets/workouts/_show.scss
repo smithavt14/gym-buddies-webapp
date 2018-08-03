@@ -1,8 +1,27 @@
-.workouts-show-banner {
-  height: 40vh;
-  width: 100vw;
-  background-size: cover;
+.parallax {
+    /* Set a specific height */
+    height: 70vh;
+    background-size: cover;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+.parallax-title {
+    padding-top: 10%;
+    padding-left: 3%;
+    color: white;
+    font-size: 60px;
+    text-shadow: 1px 1px 3px black;
+}
+
+
+// .workouts-show-banner {
+//   height: 40vh;
+//   width: 100vw;
+//   background-size: cover;
+// }
 
 
 .workouts-show-wrapper {
